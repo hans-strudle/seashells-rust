@@ -27,7 +27,7 @@ fn main() -> io::Result<()> {
     stream.read(&mut buffer)?;
     let string = String::from_utf8(buffer)
         .expect("read into buffer");
-    print!("{string}");
+    eprint!("{string}");
 
     let stdin = io::stdin();
     loop {
